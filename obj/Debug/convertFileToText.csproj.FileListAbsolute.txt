@@ -1,0 +1,7 @@
+C:\Users\along\Dropbox\cSharp\convertFileToText\convertFileToText\obj\Debug\convertFileToText.csprojResolveAssemblyReference.cache
+C:\Users\along\Dropbox\cSharp\convertFileToText\convertFileToText\bin\Debug\convert64.exe.config
+C:\Users\along\Dropbox\cSharp\convertFileToText\convertFileToText\bin\Debug\convert64.exe
+C:\Users\along\Dropbox\cSharp\convertFileToText\convertFileToText\bin\Debug\convert64.pdb
+C:\Users\along\Dropbox\cSharp\convertFileToText\convertFileToText\obj\Debug\convert64.exe
+C:\Users\along\Dropbox\cSharp\convertFileToText\convertFileToText\obj\Debug\convert64.pdb
+C:\Users\along\Dropbox\cSharp\convertFileToText\convertFileToText\bin\Debug\Properties\AssemblyInfo.cs

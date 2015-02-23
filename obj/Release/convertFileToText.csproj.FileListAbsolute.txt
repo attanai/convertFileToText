@@ -1,0 +1,6 @@
+C:\Users\along\Dropbox\cSharp\convertFileToText\convertFileToText\bin\Release\Properties\AssemblyInfo.cs
+C:\Users\along\Dropbox\cSharp\convertFileToText\convertFileToText\bin\Release\convert64.exe.config
+C:\Users\along\Dropbox\cSharp\convertFileToText\convertFileToText\bin\Release\convert64.exe
+C:\Users\along\Dropbox\cSharp\convertFileToText\convertFileToText\bin\Release\convert64.pdb
+C:\Users\along\Dropbox\cSharp\convertFileToText\convertFileToText\obj\Release\convert64.exe
+C:\Users\along\Dropbox\cSharp\convertFileToText\convertFileToText\obj\Release\convert64.pdb
