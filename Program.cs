@@ -4,11 +4,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.IO;
+using System.Reflection;
+using System.Windows.Forms;
 
 namespace convertFileToText
 {
     class Program
     {
+        //List variables to store file paths and string.
         public static string originalFile = string.Empty;
         public static string newFile = string.Empty;
         public static string b64Text = string.Empty;
@@ -83,7 +86,11 @@ namespace convertFileToText
             
         }
 
-
+        /// <summary>
+        /// Encodes file as base64 string and saves to global variable.
+        /// </summary>
+        /// <param name="file">path of file to be encoded</param>
+        /// <returns></returns>
         public static void loadFile(string file)
         {
             if (File.Exists(file))
@@ -94,8 +101,6 @@ namespace convertFileToText
                     FileStream fs = new FileStream(file, FileMode.Open, FileAccess.Read);
                     byte[] filebytes = new byte[fs.Length];
                     fs.Read(filebytes, 0, Convert.ToInt32(fs.Length));
-
-                    //Combine filename with file
                     b64Text = Convert.ToBase64String(filebytes);
                 }
                 catch (Exception e)
@@ -120,5 +125,55 @@ namespace convertFileToText
         {
             Environment.Exit(0);
         }
+        
+        
+        
+        #region decoding methods...
+        //These methods are used to convert the text back into a usable file.
+        
+        /// <summary>
+        /// Decodes file from base64 text and saves it in specified location.
+        /// </summary>
+        /// <param name="base64string">String to be decoded</param>
+        /// <param name="outputFolder">The path to the folder location of new file</param>
+        /// <param name="fileName">The name of the new file</param>
+        /// <returns></returns>
+        public static bool decodeFile(string base64string, string outputFolder, string fileName)
+        {
+            try
+            {
+                if (outputFolder == "" | outputFolder == null)
+                {
+                    outputFolder = Application.StartupPath;
+                }
+
+
+                //Convert base64 to file
+                byte[] filebytes = Convert.FromBase64String(base64string);
+                File.WriteAllBytes(outputFolder + "\\" + fileName, filebytes);
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
+
+        }
+
+
+        /// <summary>
+        /// Decodes file from base64 text and saves it in current directory.
+        /// </summary>
+        /// <param name="base64string">String to be decoded</param>
+        /// <param name="fileName">The name of the new file</param>
+        /// <returns></returns>
+        public static bool decodeFile(string base64string, string fileName)
+        {
+            return decodeFile(base64string, null, fileName);
+        }
+        
+        
+        #endregion
+        
     }
 }
